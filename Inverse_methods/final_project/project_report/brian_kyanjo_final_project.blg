@@ -1,0 +1,94 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: brian_kyanjo_final_project.aux
+The style file: abbrvnat.bst
+Database file #1: document.bib
+Repeated entry---line 112 of file document.bib
+ : @article{gessese2012direct
+ :                           ,
+I'm skipping whatever remains of this entry
+Database file #2: geoclaw.bib
+Warning--string name "peerjcs" is undefined
+--line 24 of file geoclaw.bib
+Warning--string name "advwatres" is undefined
+--line 60 of file geoclaw.bib
+Warning--string name "sisc" is undefined
+--line 78 of file geoclaw.bib
+Warning--string name "actnum" is undefined
+--line 94 of file geoclaw.bib
+Warning--string name "ijnmf" is undefined
+--line 110 of file geoclaw.bib
+Database file #3: literature.bib
+Repeated entry---line 817 of file literature.bib
+ : @article{ge:2008
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2806 of file literature.bib
+ : @article{ge:2011
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3035 of file literature.bib
+ : @article{ma-ah-be-ca-ge-ha-ke-le-le:2016
+ :                                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4058 of file literature.bib
+ : @article{ba-le-mi-ro:2003
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 4493 of file literature.bib
+ : @article{le-ge-be:2011
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5718 of file literature.bib
+ : @article{be-ge-le-ma:2011
+ :                          ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "cit"
+Warning--I didn't find a database entry for "voronina2013inverse"
+Warning--empty journal in ba-le-mi-ro:2003
+Warning--empty journal in be-ge-le-ma:2011
+Warning--empty journal in ge:2011
+Warning--empty journal in le-ge-be:2011
+Warning--empty journal in ma-ah-be-ca-ge-ha-ke-le-le:2016
+You've used 10 entries,
+            2773 wiz_defined-function locations,
+            861 strings with 9472 characters,
+and the built_in function-call counts, 5319 in all, are:
+= -- 479
+> -- 331
+< -- 7
++ -- 112
+- -- 102
+* -- 465
+:= -- 835
+add.period$ -- 44
+call.type$ -- 10
+change.case$ -- 62
+chr.to.int$ -- 10
+cite$ -- 25
+duplicate$ -- 216
+empty$ -- 398
+format.name$ -- 117
+if$ -- 1103
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 11
+newline$ -- 71
+num.names$ -- 40
+pop$ -- 115
+preamble$ -- 1
+purify$ -- 53
+quote$ -- 0
+skip$ -- 170
+stack$ -- 0
+substring$ -- 210
+swap$ -- 18
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 105
+warning$ -- 5
+while$ -- 41
+width$ -- 0
+write$ -- 159
+(There were 7 error messages)

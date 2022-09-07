@@ -1,0 +1,87 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Bale et~al.(2003)Bale, LeVeque, Mitran, and
+  Rossmanith]{ba-le-mi-ro:2003}
+D.~Bale, R.~J. LeVeque, S.~Mitran, and J.~Rossmanith.
+\newblock {A Wave Propagation Method for Conservation Laws and Balance Laws
+  with Spatially Varying Flux Functions}.
+\newblock 24\penalty0 (3):\penalty0 955--978, 2003.
+\newblock \doi{10.1137/S106482750139738X}.
+\newblock URL \url{http://dx.doi.org/10.1137/S106482750139738X}.
+
+\bibitem[Berger et~al.(2011)Berger, George, LeVeque, and
+  Mandli]{be-ge-le-ma:2011}
+M.~J. Berger, D.~L. George, R.~J. LeVeque, and K.~T. Mandli.
+\newblock {The GeoClaw software for depth-averaged flows with adaptive
+  refinement}.
+\newblock 34\penalty0 (9):\penalty0 1195--1206, September 2011.
+\newblock \doi{10.1016/j.advwatres.2011.02.016}.
+\newblock arXiv:1008.0455v2 [physics.geo-ph].
+
+\bibitem[Dias and Dutykh(2007)]{dias2007dynamics}
+F.~Dias and D.~Dutykh.
+\newblock Dynamics of tsunami waves.
+\newblock In \emph{Extreme man-made and natural hazards in dynamics of
+  structures}, pages 201--224. Springer, 2007.
+
+\bibitem[George(2008)]{ge:2008}
+D.~L. George.
+\newblock {Augmented Riemann solvers for the shallow water equations over
+  variable topography with steady states and inundation}.
+\newblock \emph{J Comp Phys}, 227\penalty0 (6):\penalty0 3089 -- 3113, 2008.
+\newblock ISSN 0021-9991.
+\newblock \doi{https://doi.org/10.1016/j.jcp.2007.10.027}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0021999107004767}.
+
+\bibitem[George(2011)]{ge:2011}
+D.~L. George.
+\newblock {Adaptive finite volume methods with well-balanced Riemann solvers
+  for modeling floods in rugged terrain: Application to the Malpasset dam-break
+  flood (France, 1959)}.
+\newblock 66\penalty0 (8):\penalty0 1000--1018, 2011.
+\newblock ISSN 1097-0363.
+\newblock \doi{10.1002/fld.2298}.
+\newblock URL \url{http://dx.doi.org/10.1002/fld.2298}.
+
+\bibitem[Gessese and Sellier(2012)]{gessese2012direct}
+A.~Gessese and M.~Sellier.
+\newblock A direct solution approach to the inverse shallow-water problem.
+\newblock \emph{Mathematical Problems in Engineering}, 2012, 2012.
+
+\bibitem[LeVeque et~al.(2011)LeVeque, George, and Berger]{le-ge-be:2011}
+R.~J. LeVeque, D.~L. George, and M.~J. Berger.
+\newblock Tsunami modelling with adaptively refined finite volume methods.
+\newblock 20:\penalty0 211 -- 289, May 2011.
+\newblock \doi{10.1017/S0962492911000043}.
+
+\bibitem[LeVeque et~al.(2002)]{leveque2002finite}
+R.~J. LeVeque et~al.
+\newblock \emph{Finite volume methods for hyperbolic problems}, volume~31.
+\newblock Cambridge university press, 2002.
+
+\bibitem[Mandli et~al.(2016)Mandli, Ahmadia, Berger, Calhoun, George,
+  Hadjimichael, Ketcheson, Lemoine, and
+  LeVeque]{ma-ah-be-ca-ge-ha-ke-le-le:2016}
+K.~T. Mandli, A.~J. Ahmadia, M.~Berger, D.~Calhoun, D.~L. George,
+  Y.~Hadjimichael, D.~I. Ketcheson, G.~I. Lemoine, and R.~J. LeVeque.
+\newblock {Clawpack: Building an open source ecosystem for solving hyperbolic
+  PDEs}.
+\newblock 2\penalty0 (68), August 8 2016.
+\newblock \doi{https://doi.org/10.7717/peerj-cs.68}.
+\newblock URL
+  \url{https://peerj.com/search/?q=mandli&t=&type=articles&subject=&topic=&uid=&sort=&journal=cs&discipline=&type=articles}.
+
+\bibitem[Monnier et~al.(2016)Monnier, Couderc, Dartus, Larnier, Madec, and
+  Vila]{monnier2016inverse}
+J.~Monnier, F.~Couderc, D.~Dartus, K.~Larnier, R.~Madec, and J.-P. Vila.
+\newblock Inverse algorithms for 2d shallow water equations in presence of wet
+  dry fronts: Application to flood plain dynamics.
+\newblock \emph{Advances in Water Resources}, 97:\penalty0 11--24, 2016.
+
+\end{thebibliography}

@@ -1,0 +1,18 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Background}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{General Objectives}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Literature}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{ Problem Formulation and Methods}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Formulation of the Forestclaw code}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Riemann solvers}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Shallow Water Equations \(SWE\)}{subsection.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Exact Riemann Solver }{subsection.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.2}{Occam Inversion}{section.2}% 10
+\BOOKMARK [1][-]{section.3}{ Results and Discusion}{}% 11
+\BOOKMARK [1][-]{section.4}{Conclusion}{}% 12
+\BOOKMARK [1][-]{section.5}{Appendix}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Forestclaw solver}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Model}{section.5}% 15
+\BOOKMARK [2][-]{subsection.5.3}{Jacobian}{section.5}% 16
+\BOOKMARK [2][-]{subsection.5.4}{Test script}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.5}{Main script}{section.5}% 18

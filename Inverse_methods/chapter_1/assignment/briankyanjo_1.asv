@@ -1,0 +1,32 @@
+
+close all
+clc
+
+mtrue = [0.18 16.21 9.81]';
+
+m = 20; 
+n = 3;
+
+tj = linspace(0,3,N);
+
+fprintf("N0.2 a) \n\n")
+
+fprintf("(i). Form G \n ")
+
+y = @(t) m1 + m2*t - 0.5*m3*t^2
+
+G = zeros(m,n);
+
+for i = 1:n
+    for j = 1:m
+       G(j,1) = 1;
+       G(j,2) = tj(j)
+       G()
+    end
+end 
+
+G
+
+
+
+

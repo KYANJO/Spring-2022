@@ -1,0 +1,171 @@
+\documentclass[11pt,a4paper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% packages %%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass{aimsessay}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+%Import the natbib package and sets a bibliography  and citation styles
+\usepackage[round]{natbib}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\usepackage{natbib}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%\usepackage{siunitx}
+%\usepackage[utf8]{inputenc}
+%\usepackage[english]{babel}
+\usepackage[all]{xy}
+\usepackage{float}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=1.7cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	colorlinks=false,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	pdftitle={Overleaf Example},
+	pdfpagemode=FullScreen,
+}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{psfrag}
+
+\usepackage{url} 
+%\bibliographystyle{abbrvnat}
+\usepackage{booktabs}  
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+%\usepackage[nottoc]{tocbibind}
+
+
+
+%%%%%%%%%%%%%%%%%%%%% students data %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\student}{Brian KYANJO }
+\newcommand{\course}{Inverse Methods}
+\newcommand{\assignment}{ Prof. Jodi Mead}
+
+%%%%%%%%%%%%%%%%%%% using theorem style %%%%%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{definition}{Definition}[section] 
+\newtheorem{theorem}{Theorem}
+\newtheorem{exa}[thm]{Example}
+\newtheorem{rem}[thm]{Remark}
+\newtheorem{coro}[thm]{Corollary}
+\newtheorem{quest}{Question}[section]
+
+%%%%%%%%%%%%%%  Shortcut for usual set of numbers  %%%%%%%%%%%
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+\begin{document}
+	
+	%%%%%%%%%%%%%%%%%%%%%%% title page %%%%%%%%%%%%%%%%%%%%%%%%%%
+	\thispagestyle{empty}
+	\begin{center}
+		\textbf{INVERSE METHODS FOR SOLVING SHALLOW WATER  EQUATIONS \\[0.5cm]
+			Project Proposal}
+		\vspace{.2cm}
+	\end{center}
+	
+	%%%%%%%%%%%%%%%%%%%%% assignment information %%%%%%%%%%%%%%%%
+	\noindent
+	\rule{17cm}{0.2cm}\\[0.3cm]
+	Name: \student \hfill Supervisor: \assignment\\[0.1cm]
+	Course: \course \hfill Date: \today\\
+	\rule{17cm}{0.05cm}
+	\vspace{.2cm}
+	
+	\subsection*{Motivation}
+	The shallow water  equations (SWE) are a system of hyperbolic partial differential equations (PDEs) describing the flow below a pressure surface in a fluid. They have been frequently used to model several real-life problems i.e. the propagation of tsunamis waves in the ocean \citep{dias2007dynamics} and modeling of atmospheric turbulence. Deep knowledge is required to handle such events, therefore first, robust, and computationally efficient methods like inverse methods are required to solve the shallow water equations.
+	
+	\subsection*{Problem description and methods used}
+	Inverse methods  have been frequently used to handle shallow water problems; see for instance   \citet{monnier2016inverse}, \citet{gessese2012direct}, and \citet{voronina2013inverse}.
+	Consider small-amplitude waves in a one-dimensional fluid channel that is shallow relative to its wavelength. The conservation of mass and  momentum equations are written in terms of  height $h(x,t)~(m)$ and momentum $h(x,t)u(x,t)~(m^{2}/s)$ as shown in system \eqref{p2}
+	\begin{equation}
+		\begin{aligned}
+			h_{t} + (hu)_x &= 0, \\
+			(hu)_t + \left(hu^{2} + \frac{1}{2} gh^{2} \right)_x & = 0,
+		\end{aligned}
+		\label{p2}
+	\end{equation}	
+	where $g$ $(m/s^{2})$ is acceleration due to gravity, $hu$ measures the flow rate of water past a point and $u(x,t)$ ($m/s$) is the horizontal velocity  \citep{leveque2002finite,toro2001shock}.  
+	The conservation laws in system \eqref{p2} can be solved by developing numerical methods based on an eigendecomposition of the Jacobian matrix.  And this can be achieved by expressing system \eqref{p2} in quasi linaer form as shown in equation \eqref{wpa3}
+	\begin{equation}
+		m_{t} + f'(m)m_{x} = 0,
+		\label{wpa3}
+	\end{equation}
+	where  $m(x,t) = (h(x,t), hu(x,t))$  and  $f'(m) \in \mathbb{R}^{m\times m}$  is a flux Jacobian matrix given by;
+	
+	\begin{equation}
+		f'(m) = \begin{bmatrix} 0 &  1 \\ -u^{2} + gh & 2u \end{bmatrix}.
+		\label{Jac}
+	\end{equation}
+	Consider a   simple set of initial conditions to equation \eqref{wpa3} with a single discontinuity at the middle of the channel.  Setting  $h$ and $hu$ equal to constants on either side of the interface, and assuming the discontinuity is at $x = 0$ yields a Riemann problem with initial conditions given by equation \eqref{rp1}.
+	\begin{eqnarray}
+		m(x,0)& =& \begin{cases}
+			(h_{l},h_{l}u_{l}), & \text{if \, $x \le 0,$}\\
+			(h_{l},h_{l}u_{l}),& \text{if \, $x > 0,$}\\
+			
+		\end{cases}  
+		\label{rp1}     
+	\end{eqnarray}
+	where $m_{l}$ and $m_{r}$ are two piece-wise constant states separated by a discontinuity. 
+	Suppose that we know the nature of the solution (i.e. consits of two shocks or a single shock) to equation \eqref{wpa3},  then we can solve the Riemann problem (equation \eqref{rp1})  by finding the intermediate state $m_{m}(x,t) = (h_{m}(x,t), hu_{m}(x,t))$ that can be connected to $m_l$ by a left going shock or to $m_r$ by a right going shock and vise varsa. Through the points $m_l$ and $m_r$ there is a curve of points that connects $m_l$ to $m_m$ or   $m_m$ to $m_r$ via a left going shock or right going shock. For shallow water equations, these points must satisfy the non linear equation \eqref{non} \citep{leveque2002finite}.
+	
+	\begin{equation}
+		F(h_m) = u_r - u_l + (h_m - h_r)\sqrt{\frac{g}{2}\left( \frac{1}{h_m} +  \frac{1}{h_r}\right) } + (h_m - h_l)\sqrt{\frac{g}{2}\left( \frac{1}{h_m} +  \frac{1}{h_l}\right) } 
+		\label{non}
+	\end{equation}
+	
+	%	\section*{Method used}
+	The Methods that will be used in this study are the forward and inverse methods for solving a Riemann problem. The idea behind the forward approach (based on Forestclaw) is to find Roe-averaged parameters: height field ($h$), velocity  field ($u$), and root mean square speed ($c$) for a Riemann problem at every interface.  These are used to obtain the corresponding eigenvalues and eigenvectors for the Jacobian matrix \eqref{Jac} that yield the waves and speeds used in obtaining fluctuations at each interface. These fluctuations as shown in equation \eqref{wpa2} are used to obtain the  forestclaw output $M$.
+	\begin{equation}
+		M_{i}^{n+1} =  M_{i}^{n} - \frac{\Delta t}{\Delta x}(\mathcal{A^{+}}\Delta 	M_{i-\frac{1}{2}}^{n} + \mathcal{A^{-}}M_{i+\frac{1}{2}}^{n})
+		\label{wpa2}
+	\end{equation}
+	where  the fluctuations  $\mathcal{A^{-}}\Delta 	M_{i+\frac{1}{2}}^{n}$ and  $\mathcal{A^{+}}\Delta M_{i-\frac{1}{2}}^{n}$ are the net updating contributions from the  leftward and rightward moving waves into the grid cell  from the right and left interfaces respectively, $\Delta t$ and $\Delta x $ are the temporal and spatial step size respectively.
+	Then the simulated data $d_s$ is generated at each interface by adding noise to the forestclaw output as shown in equation \eqref{ep}.
+	
+	\begin{equation}
+		d_s =G(m) + \epsilon,  \qquad \text{for} ~ \epsilon \sim N(0,\sigma^{2})
+		\label{ep}
+	\end{equation}
+	where $G(m) = M$ represents the forestclaw output, with $m=(h,hu)$ such that $h$ and $hu$ are chosen values. Then Jacobian matrix is obtained by;
+	\begin{equation}
+		J(m^{k+1})  \approx \frac{(G(m^{k+1} + h) - (G(m^{k+1})))}{h},
+	\end{equation}
+	And then iterate the estimate $m^{k}$ that satisfy
+	\begin{equation}
+		\min_{m^{k+1}} \left\lbrace ||J(m^{k})m^{k+1} - d_s||_2^{2} + \alpha^{2}||m^{k+1} - m^{k}||_2^{2} \right\rbrace 
+	\end{equation}
+	where $\alpha$ is obtained using a regularized discrepancy principle. The value of the parameter estimate for which the norm of the change in the estimates is less than $10^{-6}$, will be the solution that will be validated with results in the next method. To check the nature of the simulated data, the $\chi_{obs}^{2}$ and p-value will be calculated.\\ 
+	
+	\subsection*{Time Frame}
+	All the stages of this project are planned for the remaining time of the semester and that is the four weeks in the month of April and the first five days of May 2022. During this time the following will be accomplished;
+	\begin{itemize}
+		\item First week: Accomplishment of the coding part of the project.
+		\item Second week: simulation of the problem, visualization, and analysis of results.
+		\item Third Week: Start and finish the write  up of the project 
+		\item Fourth Week: Project presentation, implementation, and finalizing remarks.
+		\item First five days of May: Submission of the project report.
+	\end{itemize}
+	The accomplishment of all these tasks in the anticipated time frame will prove a high level of success.
+	\subsection*{Take home}
+	At the end of the project, I will have learned how to: write up a project proposal, formulate and implement an inverse shallow-water problem from a forward one, use the Gauss-Newton method to solve nonlinear problems, and think as an inverse method expert. 
+	
+	
+	%	\bibliographystyle{plain}
+	\bibliographystyle{abbrvnat}
+	\bibliography{document,geoclaw,literature}
+	
+\end{document}
